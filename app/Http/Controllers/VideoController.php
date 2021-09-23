@@ -36,7 +36,7 @@ class VideoController extends Controller
             'description' => $request->description,
             'video' => $videoName,
         ]);
-        $path = "c:/7.4/htdocs/vc/vc/public/videos/";
+        $path = "c:/7.4/htdocs/Test-Task/public/videos/";
         $orignalName = str_replace("/videos/", "", $videoName);
         $filename =  strstr($orignalName, '.', true);
         $convertedName = "/videos/" . $filename . ".m3u8";
@@ -86,7 +86,7 @@ class VideoController extends Controller
             $videoName = '/videos/' . time() . '.' . $request->video->extension();
             $request->video->move(public_path('videos'), $videoName);
 
-            $path = "c:/7.4/htdocs/vc/vc/public/videos/";
+            $path = "c:/7.4/htdocs/Test-Task/public/videos/";
             $orignalName = str_replace("/videos/", "", $videoName);;
             $filename =  strstr($orignalName, '.', true);
             $convertedName = "/videos/" . $filename . ".m3u8";
